@@ -1,0 +1,101 @@
+*{
+	font-family: sans-serif, Verdana, Arial, Helvetica ;
+}
+body{
+	background-color: rgb(10,12,16);
+	width: 100vw;
+    	height: 100vh;
+    	display: flex;
+    	flex-direction: row;
+    	justify-content: center;
+    	align-items: center;
+}
+
+#caixa{
+	background-color: rgb(19,22,31);
+	height: 400px;
+	width: 380px;
+}
+#bestscore{
+	height: 55px;
+	width: 270px;
+	background-color: rgb(39,44,64);
+	margin: 27px auto 17px auto;
+	border-radius: 15px;
+	display: flex;
+}
+
+#numbers{
+	margin: 0px auto;
+	height: 265px;
+	width: 270px;
+	background-color: rgb(39,44,64);
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap; 
+	border-radius: 7px;
+}
+
+#but{
+	height: 60px;
+	width: 250px;
+	margin: 17px auto 0px auto;
+	display: flex;
+	justify-content: space-between;
+}
+
+#bestscore > div {
+	border-radius: 15px;
+	color: #FFFFFF;
+	text-align: center;
+	height: 55px; 
+}
+#best{
+	border-radius: 15px;
+	width: 125px;
+	background-color: rgb(39,44,64);
+}
+#score{
+	background-color: rgb(47,52,72);
+	border-radius: 15px;
+	width: 145px;
+}
+#best > p, #score > p{
+	margin: 5px 5px 10px 5px;
+	font-weight: bold;
+}
+.preto{
+	border-radius: 7px;
+	background-color: rgb(25,27,38);
+	height: 56px;
+	width: 56px;
+	margin: 5px;
+	color: #FFFFFF;
+	line-height: 56px;
+	text-align: center;
+	font-size: 25px;
+	font-weight: bold;
+  color: rgb(25,27,38);
+}
+#numbers > .color{
+	background-color: rgb(25,27,38);
+	
+} 
+
+#numbers > div > p{
+	margin-top: 0px;
+	color: rgb(25,27,38);
+}
+.supremo{
+  background-color: rgb(25,179,159) !important;
+  color: white !important;
+}
+#lixeira{
+  margin-top:-10px;
+}
+#lixeira:hover{
+  cursor: pointer;
+}
+#numbers > div:hover{
+  cursor: pointer;
+}

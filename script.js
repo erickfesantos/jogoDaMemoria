@@ -57,6 +57,11 @@ function impedir3Jogadas(){
   }
 }
 
+function sortearNumero() {
+   return Math.floor(Math.random() * 16) + 1;
+}
+
+// Criar função embaralhar para tornar conteúdo das cartas aleatório
 
 
 

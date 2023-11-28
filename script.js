@@ -5,8 +5,38 @@ let lixo = document.querySelector('#lixeira');
 
 let pontos=0, limitador=0, indiceToConteudo= [0, 0], indices = [0, 0]; 
 let controle = new Array(16).fill(0), limiteDeCartas = 0, reset = 0;
+let conteudoCrescente = 1, controleLoop = 0, controleConteudoCrescente = 0, sorteado = 0;
 
-// corrigir conteúdo da carta aparecendo depois do alerta 
+
+function allZero(){
+  cartas.map((K)=>{
+    K.textContent = 0;
+  });
+}
+
+function embaralhar(){
+  controleLoop = conteudoCrescente = controleConteudoCrescente = 0;
+  allZero();
+  
+  
+  while(controleLoop == 0){
+    sorteado = sortearNumero();
+    if(cartas[sorteado].textContent == 0){
+      cartas[sorteado].textContent = conteudoCrescente;
+      controleConteudoCrescente++;
+    }
+
+    if(controleConteudoCrescente == 2){
+      controleConteudoCrescente = 0;
+      conteudoCrescente++;
+    }
+
+    controleLoop = 1;
+    cartas.map((K)=>{
+      if(K.textContent == 0) controleLoop = 0;
+    });
+  }
+}
 
 function removerLimparPontos(supremos){
   supremos.map((K)=>{
@@ -14,6 +44,7 @@ function removerLimparPontos(supremos){
     pontos = 0;
     score.innerHTML = pontos;
   });
+  embaralhar();
 }
 
 function trocarVerdeBranco(K){
@@ -58,13 +89,10 @@ function impedir3Jogadas(){
 }
 
 function sortearNumero() {
-   return Math.floor(Math.random() * 16) + 1;
+   return Math.floor(Math.random() * 16);
 }
 
-// Criar função embaralhar para tornar conteúdo das cartas aleatório
-
-
-
+embaralhar();
 
 cartas.map((K,indice)=>{  
   
